@@ -7,7 +7,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <title>stlite app</title>
+    <title>CasinoList.ROCKS</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@stlite/mountable@0.58.3/build/stlite.css"
@@ -80,7 +80,7 @@ def calculate_similarity(user_prefs, casino):
 
 # Steps to ask questions
 if st.session_state.step == 0:
-    st.title("AI Casino Finder")
+    st.title("CasinoList.ROCKS AI Casino Finder")
     st.subheader("What style of casino games do you prefer?")
     
     # Display images for game types
@@ -135,7 +135,7 @@ if st.session_state.step == 3:
     user_prefs = st.session_state.preferences
     best_casinos = sorted(casinos, key=lambda x: calculate_similarity(user_prefs, x), reverse=True)[:2]
     if best_casinos:
-        st.subheader("Based on your preferences, AI recommends the following casino(s):")
+        st.subheader("Based on your preferences, CasinoList.ROCKS recommends the following casino(s):")
         for casino in best_casinos:
             st.write(f"**{casino['name']}**")
             # Provide the unique affiliate link for the casino
